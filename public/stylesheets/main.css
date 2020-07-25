@@ -1,0 +1,136 @@
+.thumbnail img{
+    width: 100%;
+}
+
+.thumbnail{
+    padding: 0;
+}
+
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#delete-form{
+    display: inline;
+}
+
+.test:after {
+    content: '\2807';
+    font-size: 2em;
+    color: #2e2e2e;
+     }
+ 
+/* landing page css */
+
+.overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    top: 25%;
+    left: 90px;
+}
+
+.box-1{
+    width: 180px;
+    height: 400px;
+    background: url(pic1.jpg);    
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+
+}
+
+.box-2{
+    width: 180px;
+    height: 400px;
+    background: url(pic2.jpg);    
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    transform: translateY(-80px);
+    
+}
+
+.box-3{
+    width: 180px;
+    height: 400px;
+    background: url(pic3.jpg);    
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    
+}
+
+.box-4{
+    width: 180px;
+    height: 400px;
+    background: url(pic4.jpg);    
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    transform: translateY(-80px);
+    
+}
+
+main{
+    width: 55%;
+    position: relative;
+    z-index: 5;
+    top: 30%;
+    float: right;
+}
+
+main h1{
+    font-size: 190px;
+    letter-spacing: 20px;
+    font-family:'Bebas Neue',sans-serif;
+    transform: translateY(-30px);
+    color: #08303A;
+    line-height: 50px;
+    margin: 0;
+    margin-top: 124px;
+    margin-left: -2px;
+}
+
+main h1 span{
+    color: #fff;
+}
+
+main h5{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 35px;
+    color: #0F979B;
+    text-align: center;
+    transform: translateX(42px);
+    
+}
+
+main p{
+    width: 50%;
+    text-align: justify;
+    transform: translateX(55%);
+    font-weight: 400;
+    color: #7f7f7f;
+}
+button{
+    width: 180px;
+    height: 45px;
+
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #08303A;
+    text-transform: uppercase;
+    transform: translateX(18px);
+    border-radius: 7px;
+    letter-spacing: 5px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10vw;
+}
+
+button{
+    color: #0F979B;
+}

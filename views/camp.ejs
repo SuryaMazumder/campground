@@ -1,0 +1,31 @@
+<% include partials/header%>
+<div class="container">
+<div class="jumbotron">
+  <% if(user){ %>
+    <div class="alert alert-success">
+      <strong>Success!</strong> You logged in .</a>.
+    </div>
+    <% } %>
+
+    <h1 class="display-4">Welcome to Yelpcamp</h1>
+    <p class="lead">We picked best campground all over the world</p> <hr class="my-4">
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="/camp/new" role="button">Add new campground</a>
+    </p>
+  </div>
+<div class="row">
+<% campground.forEach(function(camps){ %>
+    <div class="col-md-3 col-sm-6">
+        <h4><%=camps.name%></h4>
+        <div  >
+        <img src="<%= camps.image %>" class=" img-thumbnail" >
+        </div>
+        <div>
+        <center><a href="/camp/<%= camps._id %>" class="btn btn-primary">More Info</a></center>
+        </div>
+    </div>
+<% });%>
+</div>
+</div>
+
+<% include partials/footer %>

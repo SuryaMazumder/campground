@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+   <link rel="stylesheet" type="text/css" href='/stylesheets/main.css'>
+
+        
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-default ">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">Yelpcamp</a>
+              </div>
+              <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">       
+                <ul class="nav navbar-nav navbar-right">
+                 <% if(!user){ %>
+                  <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                  <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              <%   }else{ %>
+                <li><a href="#">Signed in as <%=user.username %></a></li>
+
+                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+               <% } %>
+             </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="container">
+        <%  if(error && error.length>0){ %>
+            <div class="alert alert-danger flash" role="alert"  >
+              <strong>Warning!</strong> <%= error %>
+          </div>  
+        <% } %>
+
+        <%  if(success && success.length>0){ %>
+          <div class="alert alert-success flash" role="alert"  >
+            <strong>Successfully!</strong> <%= success %>
+          </div>      
+          <% } %>
+  
+          </div>
+            
